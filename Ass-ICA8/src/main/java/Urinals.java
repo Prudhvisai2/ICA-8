@@ -11,8 +11,10 @@ public class Urinals {
     public boolean correctString(){
         return true;
     }
+
+    //github link:
     public static void main(String[] args){
-        System.out.println("");
+        System.out.println("dsa");
     }
 
 }
