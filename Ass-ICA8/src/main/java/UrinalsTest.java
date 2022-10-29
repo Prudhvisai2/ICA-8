@@ -18,6 +18,12 @@ public class UrinalsTest {
         Urinals u = new Urinals();
         Assertions.assertEquals(u.countUrinals("00000"),3);
     }
+
+    @Test
+    void testCountUrinals2(){
+        Urinals u = new Urinals();
+        Assertions.assertEquals(u.countUrinals("00001"),2);
+    }
 }
 
 
