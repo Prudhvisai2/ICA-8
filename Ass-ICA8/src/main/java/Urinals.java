@@ -1,7 +1,6 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Urinals {
 
@@ -51,6 +50,18 @@ public class Urinals {
             if(s.charAt(i)=='1' && i+1 < s.length() && s.charAt(i+1)=='1') return false;
         }
         return true;
+    }
+
+    public ArrayList<String> openFile(String file) throws FileNotFoundException {
+        ArrayList<String> r = new ArrayList<String>();
+        File _file = new File(file);
+        Scanner sc = new Scanner(_file);
+
+        while (sc.hasNextLine()) {
+            String s = sc.nextLine().trim();
+            r.add(s);
+        }
+        return r;
     }
 
 
