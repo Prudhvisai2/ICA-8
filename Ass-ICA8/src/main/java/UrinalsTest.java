@@ -62,6 +62,12 @@ public class UrinalsTest {
         Assertions.assertEquals(u.goodString("10001"),true);
     }
 
+    @Test
+    void testGoodString2(){
+        Urinals u = new Urinals();
+        Assertions.assertEquals(u.goodString("1010011"),false);
+    }
+
 }
 
 
