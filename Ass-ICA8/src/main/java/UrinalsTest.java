@@ -12,4 +12,12 @@ public class UrinalsTest {
         Urinals u = new Urinals();
         u.writeFile(s);
     }
+
+    @Test
+    void testCountUrinals1(){
+        Urinals u = new Urinals();
+        Assertions.assertEquals(u.countUrinals("00000"),3);
+    }
 }
+
+
