@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -24,6 +25,13 @@ public class UrinalsTest {
         Urinals u = new Urinals();
         Assertions.assertEquals(u.countUrinals("00001"),2);
     }
+
+    @Test
+    void testCountUrinals3(){
+        Urinals u = new Urinals();
+        Assertions.assertEquals(u.countUrinals("10000"),2);
+    }
+
 }
 
 
