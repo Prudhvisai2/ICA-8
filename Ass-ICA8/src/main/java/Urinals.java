@@ -19,6 +19,33 @@ public class Urinals {
         }
     }
 
+    public int countUrinals(String s) {
+        if(!goodString(s)) return -1;
+        int total = 0;
+        int counter = 0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='0') {
+                counter++;
+                if(i>=1&&s.charAt(i-1)=='1') {
+                    counter--;
+                }
+            }
+            else if(s.charAt(i)=='1') {
+                if(counter>=1) counter--;
+                int oddCount = (counter%2);
+                total += counter/2 + oddCount;
+                counter = 0;
+            }
+            else {
+                throw new NumberFormatException();
+            }
+        }
+        int oddCount = (counter%2);
+        total += counter/2 + oddCount;
+        return total;
+    }
+
+
     //github link:
     public static void main(String[] args){
         System.out.println("dsa");
