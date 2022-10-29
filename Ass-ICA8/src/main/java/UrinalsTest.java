@@ -3,6 +3,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class UrinalsTest {
 
 
@@ -36,6 +38,16 @@ public class UrinalsTest {
     void testCountUrinals4(){
         Urinals u = new Urinals();
         Assertions.assertEquals(u.countUrinals("010010"),0);
+    }
+
+    @Test
+    void testCounterUrinals5(){
+        Urinals u = new Urinals();
+        NumberFormatException thrown = assertThrows(
+                NumberFormatException.class,
+                ()->u.countUrinals("1av"),
+                "is an error"
+        );
     }
 
 }
