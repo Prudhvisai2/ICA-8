@@ -74,6 +74,12 @@ public class UrinalsTest {
         Assertions.assertEquals(u.goodString(""),false);
     }
 
+    @Test
+    void testGoodString5(){
+        Urinals u = new Urinals();
+        Assertions.assertEquals(u.goodString(null),false);
+    }
+
 }
 
 
