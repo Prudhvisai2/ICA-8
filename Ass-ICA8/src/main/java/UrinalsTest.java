@@ -50,6 +50,12 @@ public class UrinalsTest {
         );
     }
 
+    @Test
+    void testGoodString0(){
+        Urinals u = new Urinals();
+        Assertions.assertEquals(u.goodString("101101"),false);
+    }
+
 }
 
 

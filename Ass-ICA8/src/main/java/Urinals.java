@@ -45,7 +45,7 @@ public class Urinals {
     }
 
     Boolean goodString(String s){
-        if( s==null || s.isBlank()) return false;
+        if( s==null || s.isEmpty()) return false;
         for(int  i = 0; i<s.length(); i++) {
             if(s.charAt(i)=='1' && i+1 < s.length() && s.charAt(i+1)=='1') return false;
         }
@@ -92,10 +92,3 @@ public class Urinals {
 
 }
 
-
-    //github link:
-    public static void main(String[] args){
-        System.out.println("dsa");
-    }
-
-}
