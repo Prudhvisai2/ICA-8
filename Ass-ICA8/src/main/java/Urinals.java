@@ -44,6 +44,14 @@ public class Urinals {
         total += counter/2 + oddCount;
         return total;
     }
+    
+    Boolean goodString(String s){
+        if( s==null || s.isBlank()) return false;
+        for(int  i = 0; i<s.length(); i++) {
+            if(s.charAt(i)=='1' && i+1 < s.length() && s.charAt(i+1)=='1') return false;
+        }
+        return true;
+    }
 
 
     //github link:
