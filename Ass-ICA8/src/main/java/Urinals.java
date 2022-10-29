@@ -64,6 +64,34 @@ public class Urinals {
         return r;
     }
 
+    public static void main(String[] args) throws IOException {
+        System.out.println("Enter a choice: \n1. Use keyboard\n2. Use file system");
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(System.in));
+
+        String string = reader.readLine();
+        Urinals u = new Urinals();
+        if(string.trim().equalsIgnoreCase("1")){
+            while(true){
+                System.out.println("Enter a string:");
+                string = reader.readLine();
+                System.out.println(u.countUrinals(string));
+            }
+        } else {
+            System.out.println("Enter a file name");
+            string = reader.readLine();
+            ArrayList<String> list = u.openFile(string);
+            ArrayList<String> output = new ArrayList<String>();
+            for(String str: list) {
+                output.add(String.valueOf(u.countUrinals(str)));
+            }
+            System.out.println("Output in output.txt file");
+            u.writeFile(output);
+        }
+    }
+
+}
+
 
     //github link:
     public static void main(String[] args){
