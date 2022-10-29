@@ -32,6 +32,12 @@ public class UrinalsTest {
         Assertions.assertEquals(u.countUrinals("10000"),2);
     }
 
+    @Test
+    void testCountUrinals4(){
+        Urinals u = new Urinals();
+        Assertions.assertEquals(u.countUrinals("010010"),0);
+    }
+
 }
 
 
