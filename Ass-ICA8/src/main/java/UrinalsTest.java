@@ -1,9 +1,9 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 public class UrinalsTest {
 
-    @Test
-    void test1(){
-        Urinals u = new Urinals();
-    }
+
+   
 }
